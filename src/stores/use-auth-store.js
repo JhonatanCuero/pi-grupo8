@@ -5,7 +5,6 @@ import {
     signInWithPopup,
     signOut,
 } from "firebase/auth";
-
 import { auth } from "../../firebase.config";
 
 const provider = new GoogleAuthProvider();
@@ -16,9 +15,9 @@ const useAuthStore = create((set) => ({
 
     loginGoogleWithPopUp: async () => {
         await signInWithPopup(auth, provider)
-            .catch((error) => {
-                console.log(error);
-            });
+        .catch((error) => {
+            console.log(error);
+        });
     },
 
     logout: async () => {

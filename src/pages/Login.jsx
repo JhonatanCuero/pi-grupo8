@@ -4,7 +4,7 @@ import useAuthStore from "../stores/use-auth-store"
 
 export default function Login(){
 
-    const {user, loginGoogleWithPopUp, observeAuthState} = useAuthStore()
+    const {user, logout, loginGoogleWithPopUp, observeAuthState, loading} = useAuthStore()
     
     useEffect(()=>{
         observeAuthState()
@@ -16,27 +16,26 @@ export default function Login(){
 
     console.log(user);
 
-    {/*const handleLogout = useCallback(() => {
+    const handleLogout = useCallback(() => {
         logout();
     }, [logout]);
 
     if (loading) {
         return <p className="loading-text">Cargando...</p>;
-    }*/}
-
+    };
 
     return (
     <div className="container-login">
       {user ? (
         <>
           <p className="welcome-text">Bienvenido, {user.displayName}</p>
-          {/*<button className="button-logout" onClick={handleLogout}>
+          <button className="button-logout" onClick={handleLogout}>
             Cerrar sesión
-          </button>*/}
+          </button>
         </>
       ) : (
         <button onClick={handleLogin}>Iniciar sesión</button>
       )}
     </div>
     )
-}
+};
