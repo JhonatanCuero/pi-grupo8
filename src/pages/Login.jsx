@@ -1,6 +1,7 @@
 import "./Login.css"
 import { useCallback, useEffect } from "react"
 import useAuthStore from "../stores/use-auth-store"
+import UserDAO from "../daos/userDAO"
 
 export default function Login(){
 
@@ -9,6 +10,17 @@ export default function Login(){
     useEffect(()=>{
         observeAuthState()
     },[observeAuthState])
+
+    useEffect(() => {
+        if (user) {
+            const newUser = {
+                email: user.email,
+                displayName: user.displayname,
+                photoUrl: user.photoURL,
+            };
+            UserDAO.createUser(newUser);
+        }
+    }, [user]);
 
     const handleLogin = useCallback(()=>{
         loginGoogleWithPopUp()
