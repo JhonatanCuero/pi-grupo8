@@ -1,7 +1,7 @@
 import "./Login.css"
 import { useCallback, useEffect } from "react"
 import useAuthStore from "../stores/use-auth-store"
-import UserDAO from "../daos/userDAO"
+import UserDAO from "../daos/UserDAO"
 
 export default function Login(){
 
