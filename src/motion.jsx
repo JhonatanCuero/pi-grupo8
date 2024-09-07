@@ -3,10 +3,10 @@ import { useRef } from "react";
 
 const motion = () => {
   const houseRef = useRef(null);
-  let time = 0; // Variable para controlar el tiempo
+  let time = 0;
 
   useFrame((state, delta) => {
-    time += delta * 1; // Incrementa el tiempo para animar el movimiento
+    time += delta * 1; 
 
     // Movimiento sinusoidal
     const amplitudeY = 5; // Amplitud del movimiento en Y (altura de la curva)
@@ -35,11 +35,11 @@ const motion = () => {
         scale-y={1.5}
       >
         <coneGeometry args={[1, 1, 4]} />
-        <meshStandardMaterial color={0x6c3483} />
+        <meshPhongMaterial color={0x6c3483} shininess={100} />
       </mesh>
       <mesh name="structure">
         <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="#FFC300" />
+        <meshPhongMaterial color="#FFC300" shininess={50} />
       </mesh>
     </group>
   );

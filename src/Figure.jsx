@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { TrackballControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import House from "./motion";
 
@@ -14,7 +14,7 @@ const Figure = () => {
         <Canvas camera={cameraSettings}>
           <ambientLight intensity={1.5} />
           <directionalLight position={[0, 10, 10]} intensity={5} />
-          <OrbitControls enablePan={false} />
+          <TrackballControls />
           <House />
         </Canvas>
       </>
