@@ -6,8 +6,6 @@ export default function Login(){
 
     const {user, loginGoogleWithPopUp, observeAuthState} = useAuthStore()
     
-    const navigate = useNavigate();
-
     useEffect(()=>{
         observeAuthState()
     },[observeAuthState])
@@ -18,15 +16,15 @@ export default function Login(){
 
     console.log(user);
 
-    const handleLogout = useCallback(() => {
+    {/*const handleLogout = useCallback(() => {
         logout();
     }, [logout]);
 
     if (loading) {
         return <p className="loading-text">Cargando...</p>;
-    }
+    }*/}
 
-    
+
     return (
     <div className="container-login">
       {user ? (
