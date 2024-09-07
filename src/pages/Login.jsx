@@ -1,12 +1,14 @@
 import "./Login.css"
 import { useCallback, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 import useAuthStore from "../stores/use-auth-store"
 import UserDAO from "../daos/UserDAO.js"
 
 export default function Login(){
 
     const {user, logout, loginGoogleWithPopUp, observeAuthState, loading} = useAuthStore()
-    
+    const navigate = useNavigate();
+
     useEffect(()=>{
         observeAuthState()
     },[observeAuthState])
@@ -32,6 +34,10 @@ export default function Login(){
         logout();
     }, [logout]);
 
+    const handleContinue = useCallback(() => {
+      navigate('/figure')
+    }, [navigate]);
+
     if (loading) {
         return <p className="loading-text">Cargando...</p>;
     };
@@ -43,6 +49,9 @@ export default function Login(){
           <p className="welcome-text">Bienvenido, {user.displayName}</p>
           <button className="button-logout" onClick={handleLogout}>
             Cerrar sesión
+          </button>
+          <button className="button-continue" onClick={handleContinue}>
+            Continuar
           </button>
         </>
       ) : (
