@@ -35,7 +35,7 @@ export default function Login(){
     }, [logout]);
 
     const handleContinue = useCallback(() => {
-      navigate('/figure')
+      navigate('/home')
     }, [navigate]);
 
     if (loading) {
@@ -50,8 +50,8 @@ export default function Login(){
           <button className="button-logout" onClick={handleLogout}>
             Cerrar sesión
           </button>
-          <button className="button-continue" onClick={handleContinue}>
-            Continuar
+          <button className="button-home" onClick={handleContinue}>
+            Pagina Principal
           </button>
         </>
       ) : (
