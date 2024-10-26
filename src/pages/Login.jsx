@@ -17,10 +17,11 @@ export default function Login(){
         if (user) {
             const newUser = {
                 email: user.email,
-                displayName: user.displayname,
+                displayName: user.displayName,
                 photoUrl: user.photoURL,
             };
             UserDAO.createUser(newUser);
+            console.log(newUser)
         }
     }, [user]);
 

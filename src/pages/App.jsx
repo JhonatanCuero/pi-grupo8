@@ -1,7 +1,7 @@
 import './App.css'
-import Login from './pages/Login'
+import Login from './Login'
 import World from './World'
-import logo from './images/logo.png';
+import logo from '../images/logo.png';
 function App() {
 
   return (
