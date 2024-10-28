@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Menu.css';  
+import logo from '../images/logo.png';
 
 const Menu = () => {
   return (
     <div className="menu-container">
-
+       
+    <img src={logo} alt="Logo" className='logo'/>
+       
       <Link to="/" className="menu-item">
         <span>Inicio</span>
       </Link>

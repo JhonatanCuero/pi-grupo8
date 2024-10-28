@@ -1,3 +1,7 @@
+.logo {
+  width: 50px;
+  height: auto;
+}
 .menu-container {
     display: flex;  
     justify-content: space-between;  
