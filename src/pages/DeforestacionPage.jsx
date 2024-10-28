@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import React from 'react';
-import TreeSakura from './Model-3D/TreeSakura';
+import TreeSakura from './model-3D/TreeSakura';
 import { OrbitControls } from '@react-three/drei';
 import { Physics, useBox } from '@react-three/cannon';
 
