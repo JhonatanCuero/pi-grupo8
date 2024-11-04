@@ -3,7 +3,7 @@ import Home from "./Home";
 import App from "./App";
 import Menu from "./Menu";
 import DeforestationPage from './DeforestacionPage';  // Página de Deforestación
-import ErosionPage from './ErosionPage';  // Página de Erosión del Suelo
+import ErosionPage from './Erosion/ErosionPage';  // Página de Erosión del Suelo
 import BiodiversityPage from './biodiversidad/BiodiversityPage';  // Página de Pérdida de Biodiversidad
 import UserPage from './UserPage';  // Página de Usuario
 
