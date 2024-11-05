@@ -52,7 +52,7 @@ const Home = () => {
       <div className="topics-container">
         <div className="topic">
           <h3>Deforestación</h3>
-          <p>La deforestación es la eliminación de árboles y vegetación en áreas forestales. Esto afecta el equilibrio
+          <p className="paragraph">La deforestación es la eliminación de árboles y vegetación en áreas forestales. Esto afecta el equilibrio
             ecológico, contribuyendo al cambio climático y la pérdida de hábitats.</p>
           <button className="ver-mas" onClick={handleDeforesClick}>
             Ver más
@@ -60,7 +60,7 @@ const Home = () => {
         </div>
         <div className="topic">
           <h3>Erosión del Suelo</h3>
-          <p>La erosión del suelo es el desgaste de la superficie terrestre causado por factores como el viento y el agua,
+          <p className="paragraph">La erosión del suelo es el desgaste de la superficie terrestre causado por factores como el viento y el agua,
             lo cual reduce la fertilidad y afecta la agricultura.</p>
           <button className="ver-mas" onClick={handleErosionClick}>
             Ver más
@@ -68,7 +68,7 @@ const Home = () => {
         </div>
         <div className="topic">
           <h3>Pérdida de Biodiversidad</h3>
-          <p>La pérdida de biodiversidad es la reducción de la variedad de especies en el planeta. Esto afecta el equilibrio
+          <p className="paragraph">La pérdida de biodiversidad es la reducción de la variedad de especies en el planeta. Esto afecta el equilibrio
             de los ecosistemas y la resiliencia natural.</p>
           <button className="ver-mas" onClick={handleBioClick}>
             Ver más
