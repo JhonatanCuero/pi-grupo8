@@ -3,61 +3,66 @@ import { useCallback, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../stores/use-auth-store"
 import UserDAO from "../daos/UserDAO.js"
+import Button_Logout from "./components/Button_Logout.jsx";
+import Button_Home from "./components/Button_Home.jsx";
 
-export default function Login(){
 
-    const {user, logout, loginGoogleWithPopUp, observeAuthState, loading} = useAuthStore()
-    const navigate = useNavigate();
+export default function Login() {
 
-    useEffect(()=>{
-        observeAuthState()
-    },[observeAuthState])
+  const { user, logout, loginGoogleWithPopUp, observeAuthState, loading } = useAuthStore()
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        if (user) {
-            const newUser = {
-                email: user.email,
-                displayName: user.displayName,
-                photoUrl: user.photoURL,
-            };
-            UserDAO.createUser(newUser);
-            console.log(newUser)
-        }
-    }, [user]);
+  useEffect(() => {
+    observeAuthState()
+  }, [observeAuthState])
 
-    const handleLogin = useCallback(()=>{
-        loginGoogleWithPopUp()
-    }, [loginGoogleWithPopUp])
+  useEffect(() => {
+    if (user) {
+      const newUser = {
+        email: user.email,
+        displayName: user.displayName,
+        photoUrl: user.photoURL,
+      };
+      UserDAO.createUser(newUser);
+      console.log(newUser)
+    }
+  }, [user]);
 
-    console.log(user);
+  const handleLogin = useCallback(() => {
+    loginGoogleWithPopUp()
+  }, [loginGoogleWithPopUp])
 
-    const handleLogout = useCallback(() => {
-        logout();
-    }, [logout]);
+  console.log(user);
 
-    const handleContinue = useCallback(() => {
-      navigate('/home')
-    }, [navigate]);
+  const handleLogout = useCallback(() => {
+    logout();
+  }, [logout]);
 
-    if (loading) {
-        return <p className="loading-text">Cargando...</p>;
-    };
+  const handleContinue = useCallback(() => {
+    navigate('/home')
+  }, [navigate]);
 
-    return (
+  if (loading) {
+    return <p className="loading-text">Cargando...</p>;
+  };
+
+  return (
     <div className="container-login">
       {user ? (
         <>
           <p className="welcome-text">Bienvenido, {user.displayName}</p>
-          <button className="button-logout" onClick={handleLogout}>
-            Cerrar sesión
-          </button>
-          <button className="button-home" onClick={handleContinue}>
-            Pagina Principal
-          </button>
+          <div style={{ marginBottom: '10px' }} onClick={handleContinue}>
+            <Button_Home text="Página Principal" />
+          </div>
+          <div onClick={handleLogout}>
+            <Button_Logout />
+          </div>
         </>
       ) : (
-        <button onClick={handleLogin}>Iniciar sesión</button>
+        <div onClick={handleLogin}>
+          <Button_Home text="Iniciar Sesión" />
+        </div>
       )}
     </div>
-    )
+  )
 };

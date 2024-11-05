@@ -13,7 +13,8 @@
 .column {
   flex: 1;
   margin: 10px;
-  background-color: #e0e0e0;
+  border: 1px solid #ddd;
+  background-color: #0b5345;
   padding: 20px;
   border-radius: 5px;
 }
@@ -33,6 +34,11 @@
 
 .paragraph {
   text-align: justify;
+  color: #ddd;
+}
+
+h3, h2 {
+  color: #fff;
 }
 
 /*Contenedor para las tres secciones en una fila*/
@@ -49,7 +55,7 @@
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #0b5345;
 }
 
 .topic h3 {
