@@ -1,6 +1,6 @@
 import './App.css'
 import Login from './Login'
-import World from './World'
+import World from './components/World'
 import logo from '../images/logo.png';
 function App() {
 
