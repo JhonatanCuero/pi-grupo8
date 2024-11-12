@@ -2,12 +2,13 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Home";
 import App from "./App";
 import Menu from "./Menu";
-import DeforestationPage from './DeforestacionPage';  // Página de Deforestación
 import ErosionPage from './Erosion/introduccion/ErosionPage';  // Página de Erosión del Suelo
+import Erosion2 from "./Erosion/sensibilizacion/Erosion2"; // Página de sensibilización de la erosión
+import DeforestacionPage from "./Deforestation/DeforestacionPage";  // Página de Deforestación
 import BiodiversityPage from './biodiversidad/BiodiversityPage';  // Página de Pérdida de Biodiversidad
 import UserPage from './UserPage';  // Página de Usuario
-import Biodiversity2 from "./biodiversidad/Biodiversity2"; //Página de sensibilización de la pérdida de biodiversidad
-import Erosion2 from "./Erosion/sensibilizacion/Erosion2"; // Página de sensibilización de la erosión
+import Sensibilization from './Deforestation/Sensibilization';
+import Biodiversity2 from "./biodiversidad/Biodiversity2"; //Página de sensibilización
 
 const RoutesProject = () => {
   return (
@@ -36,6 +37,7 @@ const ContentWithConditionalMenu = () => {
         <Route path="/biodiversidad2" element={<Biodiversity2/>} />
 
         <Route path="/usuario" element={<UserPage />} />
+        <Route path="/Sensibilization" element ={<Sensibilization />} />
       </Routes>
     </>
   );
