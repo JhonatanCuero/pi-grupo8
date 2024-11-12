@@ -30,7 +30,6 @@ const Menu = () => {
       
 
       <Link to="/usuario" className="menu-item">
-        <img src="/user-icon.png" alt="Usuario" className="menu-icon" />
         <span>Usuario</span>
       </Link>
     </div>

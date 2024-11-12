@@ -1,0 +1,17 @@
+.text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem; /* Tamaño de fuente reducido */
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente más claro */
+    padding: 5px 10px; /* Espaciado interno más pequeño */
+    border-radius: 6px; /* Bordes redondeados más pequeños */
+    max-width: 2000px; /* Ancho máximo para evitar que el texto sea muy ancho */
+    margin: 0 auto; /* Centramos el texto horizontalmente */
+    white-space: nowrap; /* Evita que el texto se corte y salte de línea */
+    overflow: hidden; /* Evita que el texto sobresalga del contenedor */
+}
+
+.btn {
+    background-color: cornflowerblue;
+    padding: 10px;
+}
