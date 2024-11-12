@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Globe from './globe';
+import Globe from './Globe';
 
 const Interactive = () => {
     // Estado para guardar la posición del objeto 3D
