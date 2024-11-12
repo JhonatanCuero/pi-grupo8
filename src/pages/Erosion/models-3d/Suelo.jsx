@@ -26,17 +26,17 @@ const Suelo = (props) => {
             <group name="Scene">
                 <group 
                     name="high_poly"
-                    position={[0.1, 1.8, 0]} scale={[0.4, 0.4, 0.3]}>
+                    position={[0.1, 1.8, 0]} scale={[1, 1, 0.9]}>
                     <mesh
                         castShadow
                         receiveShadow
                         geometry={nodes.high_poly.geometry}
                         material={materials.Material_0}
                         scale={20}
- 
+                        //position-y={1.1}
                     />
                     <mesh name="floor" rotation-x={Math.PI / 2} rotation-z={Math.PI} position-y={-2.6} receiveShadow>
-                    <boxGeometry args={[15, 20, 0.1]}/>
+                    <boxGeometry args={[30, 35, 0.1]}/>
                         <meshStandardMaterial 
                             map={floorTexture.map}
                             normalMap={floorTexture.normalMap}
