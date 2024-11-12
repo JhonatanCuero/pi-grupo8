@@ -4,7 +4,7 @@ import App from "./App";
 import Menu from "./Menu";
 import ErosionPage from './Erosion/introduccion/ErosionPage';  // Página de Erosión del Suelo
 import Erosion2 from "./Erosion/sensibilizacion/Erosion2"; // Página de sensibilización de la erosión
-import DeforestacionPage from "./Deforestation/DeforestacionPage";  // Página de Deforestación
+import DeforestationPage from "./Deforestation/DeforestacionPage";  // Página de Deforestación
 import BiodiversityPage from './biodiversidad/BiodiversityPage';  // Página de Pérdida de Biodiversidad
 import UserPage from './UserPage';  // Página de Usuario
 import Sensibilization from './Deforestation/Sensibilization';
