@@ -1,11 +1,18 @@
+
+ #root {
+  user-select: none;
+}
 h1 {
     color: #fff;
   }
 
-.p {
-    color: #fff;
+p {
+  color: lightgray;
 }
 
+li {
+  color: lightgray;
+}
 body {
   font-family: 'Lato', sans-serif;
 }
