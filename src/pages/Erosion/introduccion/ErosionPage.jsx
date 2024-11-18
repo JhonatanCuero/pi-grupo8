@@ -5,6 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 import Lights from "../Lights.jsx";
 import Staging from './Staging.jsx';
 import { useNavigate } from 'react-router-dom';
+import Button_Home from '../Button_Home.jsx';
 
 const ErosionPage = () => {
   const navigate = useNavigate();
@@ -38,9 +39,9 @@ const ErosionPage = () => {
           <Suelo  />
           </mesh>
         </Canvas>
-        <button onClick={handleEro2Click}>
-          Sensibilización
-        </button>
+        <div onClick={handleEro2Click} style={{ float: 'right', padding: '10px'}}>
+            <Button_Home text={"Continuar"}/>
+          </div>
       </div>
     </div>
     </>

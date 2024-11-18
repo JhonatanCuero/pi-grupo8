@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Pico from "../models-3d/Pico.jsx";
 import { Html, OrbitControls } from '@react-three/drei';
 import Lights from "../Lights.jsx";
 import Staging from './Staging.jsx';
 import './Erosion2.css';
-import Tronco from '../models-3d/Tronco.jsx';
+import Arbol from '../models-3d/Arbol.jsx';
 import Maquina from '../models-3d/Maquina.jsx';
+
 const Erosion2 = () => {
+
+  const [showButton, setShowButton] = useState(true);
+  
+  const toggleButton = () => {
+    setShowButton(!showButton);
+  };
 
   return (
     <>
+    <div>
+      {showButton && <button onClick={toggleButton}>Hide Button</button>}
+    </div>
+
       <div style={{ padding: '20px', textAlign: 'center' }}>
         <h1 style={{color: 'lightgray'}}>
           Sensibilización de la problemática
@@ -68,7 +79,7 @@ const Erosion2 = () => {
           <Staging />
           <mesh position-y={10}>
           <Pico />
-          <Tronco />
+          <Arbol />
           <Maquina />
           </mesh>
         </Canvas>
