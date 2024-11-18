@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
+import Interactive from './Interactive';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -23,16 +24,8 @@ const Home = () => {
       {/* Contenedor de Misión, Visión y Resumen */}
       <div className="main-sections">
         <div className="column">
-          <h2>Misión</h2>
-          <p className='paragraph'>Concientizar y educar a los usuarios sobre los problemas medioambientales relacionados con la desforestación,
-            la erosión del suelo y la pérdida de biodiversidad, utilizando tecnología web 3D para ofrecer una experiencia
-            interactiva e inmersiva que fomente el conocimiento, la reflexión y la acción hacia un futuro más sostenible.</p>
-          <h2>Visión</h2>
-          <p className='paragraph'>Ser una plataforma de referencia en la educación ambiental, contribuyendo a la formación de una generación
-            consciente y comprometida con la preservación del medio ambiente, y promoviendo el uso de tecnologías innovadoras
-            para transformar la manera en que percibimos y actuamos frente a los desafíos medioambientales.</p>
+          <Interactive/>
         </div>
-
         <div className="column">
           <h2>Resumen</h2>
           <p className="paragraph">La Tierra está enfrentando una serie de desafíos medioambientales críticos que afectan a todos los seres vivos.
