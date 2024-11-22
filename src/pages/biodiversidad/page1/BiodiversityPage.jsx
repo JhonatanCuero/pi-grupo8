@@ -1,11 +1,11 @@
 import React from 'react';
 import { Canvas } from "@react-three/fiber";
-import Zorro from "./models-3d/Zorro.jsx";
+import Zorro from "../models-3d/Zorro.jsx";
 import { OrbitControls } from "@react-three/drei";
-import Lights from "./Lights.jsx";
+import Lights from "../Lights.jsx";
 import StagingForest from './StagingForest.jsx';
 import { useNavigate } from 'react-router-dom';
-import Button_Home from '../components/Button_Home.jsx';
+import Button_Home from '../../components/Button_Home.jsx';
 
 const BiodiversityPage = () => {
   const navigate = useNavigate();

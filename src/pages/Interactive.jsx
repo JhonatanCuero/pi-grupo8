@@ -24,7 +24,7 @@ const Interactive = () => {
         <Canvas style={{ width: '100%', height: '100%' }}
         camera={{
             position: [20, 30, 10],
-            fov: 50, //campo de visión
+            fov: 50,
           }}
         >
             <ambientLight />
