@@ -125,3 +125,4 @@ const Globe = ({ scrollPosition }) => {
 };
 
 export default Globe;
+useGLTF.preload("models-3d/globe.glb");

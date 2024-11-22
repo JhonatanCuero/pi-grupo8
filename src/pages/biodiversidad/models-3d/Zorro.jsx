@@ -58,3 +58,4 @@ const Zorro = (props) => {
 }
 
 export default Zorro;
+useGLTF.preload("models-3d/foxy.glb");

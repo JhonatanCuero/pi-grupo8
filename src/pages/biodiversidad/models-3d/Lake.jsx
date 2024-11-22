@@ -1,7 +1,7 @@
 import { useGLTF, useTexture } from "@react-three/drei"
 import { useEffect, useMemo, useState } from "react";
 import { RepeatWrapping } from "three/webgpu";
-import "../Html3d.css";
+import "../page2/Html3d.css";
 
 
 const Lake = (props) => {
