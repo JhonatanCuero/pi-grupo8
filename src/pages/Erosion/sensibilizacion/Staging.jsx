@@ -6,8 +6,8 @@ const Staging = ({ showTronco }) => {
         <>
             <Environment ground={{
                 height: 30,
-                radius: 100,
-                scale: 100,
+                radius: 500,
+                scale: 500,
             }}
                 preset="park"
                 background={true} />

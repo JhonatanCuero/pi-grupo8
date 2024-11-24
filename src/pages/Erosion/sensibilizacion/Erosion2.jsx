@@ -7,8 +7,16 @@ import Staging from './Staging.jsx';
 import './Erosion2.css';
 import Arbol from '../models-3d/Arbol.jsx';
 import Maquina from '../models-3d/Maquina.jsx';
+import Button_Home from '../Button_Home.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const Erosion2 = () => {
+
+  const navigate = useNavigate();
+
+  const handleEro3Click = () => {
+    navigate('/erosion3');
+  };
 
   const [showButton, setShowButton] = useState(true);
   
@@ -83,6 +91,9 @@ const Erosion2 = () => {
           <Maquina />
           </mesh>
         </Canvas>
+        <div onClick={handleEro3Click} style={{ float: 'right', padding: '10px'}}>
+            <Button_Home text={"Continuar"}/>
+          </div>
       </div>
     </div>
     </>

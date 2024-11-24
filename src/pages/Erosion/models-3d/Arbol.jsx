@@ -4,17 +4,10 @@ import { RepeatWrapping } from 'three/webgpu';
 
 const Arbol = (props) => {
 
-  const [showButton, setShowButton] = useState(true);
+  const [showArbol, setShowArbol] = useState(true);
+
+  const onHandleArbol = () => setShowArbol(!showArbol)
   
-  const toggleButton = () => {
-    setShowButton(!showButton);
-  };
-
-  const handleTronco = (e) => {
-    toggleButton;
-    console.log(e);
-  };
-
   const { nodes, materials } = useGLTF('/models-3d/Maple.glb')
 
   const PATH = useMemo(() => "/models-3d/materials/floor/erosion/erosion_", []);
@@ -33,8 +26,9 @@ const Arbol = (props) => {
   });
 
   return (
+    showArbol &&
     <group {...props} dispose={null}
-    onClick={(e) => handleTronco(e)}>
+    onClick={onHandleArbol}>
       <group name="Scene"
       position={[5, -10, 35]} scale={[3, 3, 3]}>
         <group name="SM_Maple1_MZRT" rotation={[Math.PI / 2, 0, 0]} scale={0.06}>
