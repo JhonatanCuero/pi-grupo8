@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import Lake from "./models-3d/Lake";
+import Lake from "../models-3d/Lake";
 import { OrbitControls } from "@react-three/drei";
 import Html3d from "./Html3d";
 import StagingSky from "./StagingSky";

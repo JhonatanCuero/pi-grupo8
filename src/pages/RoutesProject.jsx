@@ -6,10 +6,10 @@ import ErosionPage from './Erosion/introduccion/ErosionPage';  // Página de Ero
 import Erosion2 from "./Erosion/sensibilizacion/Erosion2"; // Página de sensibilización de la erosión
 import Erosion3 from "./Erosion/solucion/Erosion3"; // Página de soluciones de la erosión
 import DeforestationPage from "./Deforestation/DeforestacionPage";  // Página de Deforestación
-import BiodiversityPage from './biodiversidad/BiodiversityPage';  // Página de Pérdida de Biodiversidad
+import BiodiversityPage from './biodiversidad/page1/BiodiversityPage';  // Página de Pérdida de Biodiversidad
 import UserPage from './UserPage';  // Página de Usuario
 import Sensibilization from './Deforestation/Sensibilization';
-import Biodiversity2 from "./biodiversidad/Biodiversity2"; //Página de sensibilización
+import Biodiversity2 from "./biodiversidad/page2/Biodiversity2"; //Página de sensibilización de biodiversidad
 
 const RoutesProject = () => {
   return (
