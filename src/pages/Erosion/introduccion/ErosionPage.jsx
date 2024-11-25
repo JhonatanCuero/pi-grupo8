@@ -32,7 +32,12 @@ const ErosionPage = () => {
           fov: 50,
         }}
         >
-          <OrbitControls />
+          <OrbitControls 
+          minPolarAngle={0} // Ángulo mínimo de elevación (0 radianes = horizonte)
+          maxPolarAngle={Math.PI / 2.1} // Ángulo máximo de elevación (90 grados = no mirar debajo del piso)
+          minDistance={20}
+          maxDistance={50}
+          />
           <Lights />
           <Staging />
           <mesh position-y={0.8}>
