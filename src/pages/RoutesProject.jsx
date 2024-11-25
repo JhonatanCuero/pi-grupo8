@@ -7,6 +7,7 @@ import ErosionPage from './Erosion/ErosionPage';  // Página de Erosión del Sue
 import BiodiversityPage from './biodiversidad/BiodiversityPage';  // Página de Pérdida de Biodiversidad
 import UserPage from './UserPage';  // Página de Usuario
 import Sensibilization from './Deforestation/Sensibilization';
+import Solution from './Deforestation/Solution';
 
 const RoutesProject = () => {
   return (
@@ -30,6 +31,7 @@ const ContentWithConditionalMenu = () => {
         <Route path="/biodiversidad" element={<BiodiversityPage />} />  
         <Route path="/usuario" element={<UserPage />} />
         <Route path="/Sensibilization" element ={<Sensibilization />} />
+        <Route path="/solution" element={<Solution />} />
       </Routes>
     </>
   );
