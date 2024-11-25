@@ -10,6 +10,7 @@ import BiodiversityPage from './biodiversidad/page1/BiodiversityPage';  // Pági
 import UserPage from './UserPage';  // Página de Usuario
 import Sensibilization from './Deforestation/Sensibilization';
 import Biodiversity2 from "./biodiversidad/page2/Biodiversity2"; //Página de sensibilización de biodiversidad
+import NotFound from "./NotFound";
 
 const RoutesProject = () => {
   return (
@@ -40,14 +41,10 @@ const ContentWithConditionalMenu = () => {
 
         <Route path="/usuario" element={<UserPage />} />
         <Route path="/Sensibilization" element ={<Sensibilization />} />
+        <Route path="*" element = {<NotFound/>} />
       </Routes>
     </>
   );
 };
-
-/*
-path: '*', // Ruta para 404 Not Found
-element: <NotFound />, //Elemento pendiente de creacion, no olvidarse de importarlo after.
-}*/
 
 export default RoutesProject;

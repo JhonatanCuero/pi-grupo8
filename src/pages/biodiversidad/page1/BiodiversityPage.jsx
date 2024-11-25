@@ -6,6 +6,7 @@ import Lights from "../Lights.jsx";
 import StagingForest from './StagingForest.jsx';
 import { useNavigate } from 'react-router-dom';
 import Button_Home from '../../components/Button_Home.jsx';
+import TextBio from './TextBio.jsx';
 
 const BiodiversityPage = () => {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ const BiodiversityPage = () => {
             <Lights />
             <StagingForest />
             <Zorro />
+            <TextBio/>
           </Canvas>
           <div onClick={handleBio2Click} style={{ float: 'right', padding: '10px'}}>
             <Button_Home text={"Continuar"}/>

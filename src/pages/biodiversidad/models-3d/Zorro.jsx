@@ -1,9 +1,12 @@
 import { useGLTF, useTexture } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import { useMemo } from "react";
 import { RepeatWrapping } from "three/webgpu";
+import { useRef } from "react";
 
 const Zorro = (props) => {
     const {nodes, materials} = useGLTF("/models-3d/foxy.glb");
+    const zorroRef = useRef();
 
     const PATH = useMemo(()=> "/models-3d/materials/floor/forrest_ground_01_", []);
     
@@ -20,12 +23,17 @@ const Zorro = (props) => {
         floorTexture[key].repeat.set(4,4);
     });
 
+    useFrame((state, delta) => {
+        if (zorroRef.current) {
+          zorroRef.current.rotation.y += delta * 0.5; // To rotate the 3D model.
+        }
+      });
 
     return (
         <group {...props} dispose={null}>
             <group name="Scene">
-                <group
-                    name="Fox"
+                <group 
+                    name="Fox" ref={zorroRef}
                     position={[0.1, 1.8, 0]} scale={[0.4, 0.4, 0.3]}>
                     <mesh
                         name="Cylinder001"
@@ -42,7 +50,7 @@ const Zorro = (props) => {
                         material={materials['White.001']}
                     />
                     <mesh name="floor" rotation-x={Math.PI / 2} rotation-z={Math.PI} position-y={-5} receiveShadow>
-                        <boxGeometry args={[50, 70, 0.1]}/>
+                        <boxGeometry args={[200, 250, 0.1]}/>
                         <meshStandardMaterial 
                             map={floorTexture.map}
                             normalMap={floorTexture.normalMap}
