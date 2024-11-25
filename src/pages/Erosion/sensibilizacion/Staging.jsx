@@ -1,15 +1,20 @@
-import { Environment, Sky } from "@react-three/drei"
+import { Environment } from "@react-three/drei";
+import Tronco from "../models-3d/Tronco";
 
-const Staging = () => {
+const Staging = ({ showTronco }) => {
     return (
         <>
             <Environment ground={{
                 height: 30,
-                radius: 100,
-                scale: 100,
+                radius: 500,
+                scale: 500,
             }}
                 preset="park"
                 background={true} />
+
+            {showTronco && (
+                <Tronco></Tronco>
+            )}
         </>
     );
 };

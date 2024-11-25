@@ -5,6 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 import Lights from "../Lights.jsx";
 import Staging from './Staging.jsx';
 import { useNavigate } from 'react-router-dom';
+import Button_Home from '../Button_Home.jsx';
 
 const ErosionPage = () => {
   const navigate = useNavigate();
@@ -31,16 +32,21 @@ const ErosionPage = () => {
           fov: 50,
         }}
         >
-          <OrbitControls />
+          <OrbitControls 
+          minPolarAngle={0} // Ángulo mínimo de elevación (0 radianes = horizonte)
+          maxPolarAngle={Math.PI / 2.1} // Ángulo máximo de elevación (90 grados = no mirar debajo del piso)
+          minDistance={20}
+          maxDistance={50}
+          />
           <Lights />
           <Staging />
           <mesh position-y={0.8}>
           <Suelo  />
           </mesh>
         </Canvas>
-        <button onClick={handleEro2Click}>
-          Sensibilización
-        </button>
+        <div onClick={handleEro2Click} style={{ float: 'right', padding: '10px'}}>
+            <Button_Home text={"Continuar"}/>
+          </div>
       </div>
     </div>
     </>
