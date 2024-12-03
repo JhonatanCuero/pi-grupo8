@@ -6,6 +6,7 @@ import Lights from "../Lights.jsx";
 import Staging from './Staging.jsx';
 import { useNavigate } from 'react-router-dom';
 import Button_Home from '../Button_Home.jsx';
+import Video from '../Video.jsx';
 
 const ErosionPage = () => {
   const navigate = useNavigate();
@@ -40,9 +41,8 @@ const ErosionPage = () => {
           />
           <Lights />
           <Staging />
-          <mesh position-y={0.8}>
           <Suelo  />
-          </mesh>
+          <Video name="screen" position={[0, 6, -16]} scale={15} />
         </Canvas>
         <div onClick={handleEro2Click} style={{ float: 'right', padding: '10px'}}>
             <Button_Home text={"Continuar"}/>
