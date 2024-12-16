@@ -2,14 +2,14 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import ForestScene from "./ForestScene";
 import { OrbitControls } from "@react-three/drei";
-import { useNavigate } from "react-router-dom";
 import Bear from "./Bear";
 import { Physics } from "@react-three/rapier";
 import Texto from "./Texto"; 
 
-const Sensibilization = () => {
-  const navigate = useNavigate();
 
+
+const Sensibilization = () => {
+  
   return (
     <div style={{ padding: "20px", textAlign: "center" }}>
       <h1>Sensibilización</h1>
@@ -42,7 +42,10 @@ const Sensibilization = () => {
             shadow-camera-top={50}
             shadow-camera-bottom={-50}
           />
+          
         </Canvas>
+
+        
       </div>
     </div>
   );
