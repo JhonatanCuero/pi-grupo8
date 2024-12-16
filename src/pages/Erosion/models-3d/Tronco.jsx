@@ -1,23 +1,22 @@
-import { useGLTF, useTexture } from "@react-three/drei";
-import { useMemo } from "react";
-import { RepeatWrapping } from "three/webgpu";
+import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { RigidBody } from "@react-three/rapier";
+import React, { useRef } from "react";
 
 const Tronco = (props) => {
+
+    const rbTroncoRef = useRef();
+
     const { nodes, materials } = useGLTF('/models-3d/TreeStump.glb')
 
-    const PATH = useMemo(() => "/models-3d/materials/floor/erosion/erosion_", []);
-
-    const floorTexture = useTexture({
-        map: PATH + "diff_1k.jpg",
-        displacementMap: PATH + "disp_1k.png",
-        normalMap: PATH + "nor_gl_1k.jpg",
-        roughnessMap: PATH + "rough_1k.jpg",
-        aoMap: PATH + "ao_1k.jpg",
+    useFrame(() => {
+      rbTroncoRef.current.addForce({x: 30, y: 1, z: 1}, true);
     });
 
   return (
+    <RigidBody type='dynamic' ref={rbTroncoRef} colliders="hull">
     <group {...props} dispose={null}>
-        <group position={[5, -8, 30]} >
+        <group position={[19, 9, -10]} >
             <mesh
             scale={[15, 15, 15]}
             castShadow
@@ -26,18 +25,9 @@ const Tronco = (props) => {
             material={materials['Default OBJ']}
             rotation={[Math.PI / 2, 0, 0]}
             />
-            <mesh name="floor" rotation-x={Math.PI / 2} rotation-z={Math.PI} position-y={-2} receiveShadow>
-            <boxGeometry args={[20, 20, 1]}/>
-            <meshStandardMaterial 
-            map={floorTexture.map}
-            normalMap={floorTexture.normalMap}
-            aoMap={floorTexture.aoMap}
-            roughnessMap={floorTexture.roughnessMap}
-            displacementMap={floorTexture.displacementMap}
-            />
-            </mesh>
       </group>
     </group>
+    </RigidBody>
   )
 }
 export default Tronco;
