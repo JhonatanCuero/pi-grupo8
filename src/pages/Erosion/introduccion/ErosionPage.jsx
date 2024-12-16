@@ -7,6 +7,7 @@ import Staging from './Staging.jsx';
 import { useNavigate } from 'react-router-dom';
 import Button_Home from '../Button_Home.jsx';
 import Video from '../Video.jsx';
+import PostProcessing from '../postprocessing.jsx';
 
 const ErosionPage = () => {
   const navigate = useNavigate();
@@ -40,7 +41,8 @@ const ErosionPage = () => {
           maxDistance={50}
           />
           <Lights />
-          <Staging />
+          
+          <Staging /><PostProcessing />
           <Suelo  />
           <Video name="screen" position={[0, 6, -16]} scale={15} />
         </Canvas>
