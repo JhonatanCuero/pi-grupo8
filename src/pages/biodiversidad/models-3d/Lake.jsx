@@ -1,7 +1,7 @@
 import { useGLTF, useTexture } from "@react-three/drei"
 import { useEffect, useMemo, useState } from "react";
 import { RepeatWrapping } from "three/webgpu";
-import "../Html3d.css";
+import "../page2/Html3d.css";
 
 
 const Lake = (props) => {
@@ -137,7 +137,7 @@ const Lake = (props) => {
                     rotation={[-Math.PI / 2, 0, 0]}
                     scale={1.239}
                 />
-                <mesh name="floor" rotation-x={Math.PI / 2} position-y={-0.02} receiveShadow>
+                <mesh name="floor" rotation-x={Math.PI / 2} position-y={-0.02} castShadow receiveShadow>
                     <boxGeometry args={[2.3, 2.3, 0.01]} />
                     <meshStandardMaterial
                         color={lakeColor}
