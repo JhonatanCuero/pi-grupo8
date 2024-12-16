@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import Button_Home from '../../components/Button_Home.jsx';
 import TextBio from './TextBio.jsx';
 import { Physics } from '@react-three/rapier';
+import PostProccesing from '../posprocessing/PostProcessing.jsx';
 
 const BiodiversityPage = () => {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ const BiodiversityPage = () => {
               <Zorro />
               <Ball position = {[1,35,1]} />
             </Physics>
+            <PostProccesing />
             <TextBio />
           </Canvas>
           <div onClick={handleBio2Click} style={{ float: 'right', padding: '10px' }}>
