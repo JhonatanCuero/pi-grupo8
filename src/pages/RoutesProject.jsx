@@ -30,7 +30,7 @@ const ContentWithConditionalMenu = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/deforestacion" element={<DeforestacionPage />} />
+        <Route path="/deforestacion" element={<DeforestationPage />} />
 
         <Route path="/erosion" element={<ErosionPage />} />
         <Route path="/erosion2" element={<Erosion2/>} />
