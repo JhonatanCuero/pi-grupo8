@@ -4,6 +4,7 @@ import Lake from "../models-3d/Lake";
 import { OrbitControls } from "@react-three/drei";
 import Html3d from "./Html3d";
 import StagingSky from "./StagingSky";
+import Video from "./Video";
 
 const Biodiversity2 = () => {
     // Estado para controlar la visibilidad de la nube
@@ -46,6 +47,7 @@ const Biodiversity2 = () => {
                         <Lake />
                         <StagingSky showCloud={showCloud} />
                         <Html3d showCloudOnce={showCloudOnce} />
+                        <Video name="screen" position={[0, 0.8, -1.25]} scale={8}/>
                     </Canvas>
                 </div>
                 <h2>Soluciones</h2>
