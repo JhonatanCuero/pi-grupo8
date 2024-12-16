@@ -5,7 +5,7 @@ const Ball = (props) => {
        <RigidBody colliders="ball">
         <mesh {...props}>
             <sphereGeometry args={[2,32,32]}/>
-            <meshStandardMaterial color={"blue"}/>          
+            <meshStandardMaterial color={"#BFD641"}/>          
         </mesh>
        </RigidBody> 
     );
