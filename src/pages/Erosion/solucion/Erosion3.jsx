@@ -10,6 +10,7 @@ import Stop from '../models-3d/Stop.jsx';
 import Terreno from '../models-3d/Terreno.jsx';
 import { Physics } from "@react-three/rapier";
 import Tronco from '../models-3d/Tronco.jsx';
+import PostProcessing from '../postprocessing.jsx';
 
 const ErosionPage = () => {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ const ErosionPage = () => {
           <Lights />
           <Staging />
           <WelcomeText />
+          <PostProcessing />
           <Physics >
             <Stop />
             <Tronco />

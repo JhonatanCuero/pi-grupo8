@@ -9,6 +9,7 @@ import Arbol from '../models-3d/Arbol.jsx';
 import Maquina from '../models-3d/Maquina.jsx';
 import Button_Home from '../Button_Home.jsx';
 import { useNavigate } from 'react-router-dom';
+import PostProcessing from '../postprocessing.jsx';
 
 const Erosion2 = () => {
 
@@ -87,6 +88,7 @@ const Erosion2 = () => {
           maxDistance={150}
           />
           <Lights />
+          <PostProcessing />
           <Staging />
           <mesh position-y={10}>
           <Pico />
