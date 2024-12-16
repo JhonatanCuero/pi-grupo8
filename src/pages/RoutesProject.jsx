@@ -12,6 +12,7 @@ import Sensibilization from './Deforestation/Sensibilization';
 import Biodiversity2 from "./biodiversidad/page2/Biodiversity2"; //Página de sensibilización de biodiversidad
 import NotFound from "./NotFound";
 
+
 const RoutesProject = () => {
   return (
     <BrowserRouter>
@@ -29,8 +30,7 @@ const ContentWithConditionalMenu = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
-
-        <Route path="/deforestacion" element={<DeforestationPage />} />
+        <Route path="/deforestacion" element={<DeforestacionPage />} />
 
         <Route path="/erosion" element={<ErosionPage />} />
         <Route path="/erosion2" element={<Erosion2/>} />

@@ -1,30 +1,34 @@
 import React, { useState } from "react";
+import { RigidBody } from "@react-three/rapier";
 import TreeForest from "./model-3D/TreeForest";
+
+
+const GROUND_POSITION = [0, 0, 0];
 
 const ForestScene = () => {
   const [trees, setTrees] = useState([]);
-  const spacing = 20;
 
-  const addTree = () => {
-    const x = Math.floor(Math.random() * 10 - 5) * spacing;  
-    const z = Math.floor(Math.random() * 10 - 5) * spacing;
-    setTrees([...trees, { id: trees.length, position: [x, 0, z] }]);
+  const addTree = (e) => {
+    const [x, z] = [e.point.x, e.point.z];
+    setTrees((prevTrees) => [...prevTrees, { id: prevTrees.length, position: [x, 0, z] }]);
   };
 
   return (
     <>
       
-      <mesh
-        rotation={[-Math.PI / 2, 0, 0]}
-        position={[0, 0, 0]}
-        receiveShadow
-        onClick={addTree}
-      >
-        <planeGeometry args={[200, 200]} />
-        <meshStandardMaterial color="lightgreen" />
-      </mesh>
+      <RigidBody type="fixed" colliders="hull">
+        <mesh
+          rotation={[-Math.PI / 2, 0, 0]}
+          position={GROUND_POSITION} 
+          receiveShadow
+          onClick={addTree} 
+        >
+          <planeGeometry args={[200, 200]} />
+          <meshStandardMaterial color="lightgreen" />
+        </mesh>
+      </RigidBody>
 
-     
+      
       {trees.map((tree) => (
         <TreeForest key={tree.id} position={tree.position} castShadow />
       ))}
@@ -33,4 +37,3 @@ const ForestScene = () => {
 };
 
 export default ForestScene;
-

@@ -15,6 +15,7 @@ const TreeSakura = (props) => {
         alphaMap: PATH + "mask_1k.png",
     });
 
+
     console.log(floortexture);
 
     return (
