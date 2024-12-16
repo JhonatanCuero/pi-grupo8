@@ -24,15 +24,12 @@ export default function Login() {
         photoUrl: user.photoURL,
       };
       UserDAO.createUser(newUser);
-      console.log(newUser)
     }
   }, [user]);
 
   const handleLogin = useCallback(() => {
     loginGoogleWithPopUp()
   }, [loginGoogleWithPopUp])
-
-  console.log(user);
 
   const handleLogout = useCallback(() => {
     logout();
